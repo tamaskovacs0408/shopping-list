@@ -20,6 +20,9 @@ function App() {
       // edit the item
     } else {
       // add item to list
+      const newItem = {id: uuid(), title: item};
+      setList([...list, newItem]);
+      setItem('')
     }
   };
 
