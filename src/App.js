@@ -11,10 +11,17 @@ function App() {
   const [updateID, setUpdateID] = useState(null);
   const [info, setInfo] = useState({show: false, msg: '', type: ''});
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div className="App">
       <h1>Shopping list</h1>
-      <form></form>
+      <form className='item_form' onSubmit={handleSubmit}>
+        <input type="text" />
+        <input type="submit" value='Add'/>
+      </form>
       <div className="list_container">
         <List />
         <button className='btn_clear'>Clear list</button>
