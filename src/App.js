@@ -4,9 +4,18 @@ import uuid from "react-uuid";
 import List from "./Component/List/List";
 import Info from "./Component/Info/Info";
 
+const getLocalStorage = () => {
+  let list = localStorage.getItem('list');
+  if (list) {
+    return (list = JSON.parse(localStorage.getItem('list')));
+  } else {
+    return [];
+  }
+}
+
 function App() {
   const [listItem, setListItem] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getLocalStorage());
   const [update, setUpdate] = useState(false);
   const [updateID, setUpdateID] = useState(null);
   const [info, setInfo] = useState({ show: false, msg: "", type: "" });
@@ -52,6 +61,9 @@ function App() {
     setUpdateID(id);
     setListItem(specItem.title)
   }
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list));
+  }, [list]);
 
   return (
     <>
