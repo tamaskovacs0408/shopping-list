@@ -16,6 +16,7 @@ function App() {
 
     if(!listItem) {
       // display info
+      setInfo({show: true, msg: 'Enter any value', type: 'red'})
     } else if(listItem & update) {
       // edit the item
     } else {

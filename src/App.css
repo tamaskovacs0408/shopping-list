@@ -8,6 +8,23 @@
   align-items: center;
 }
 
+.info {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.info_red {
+  color: red;
+  background-color: rgb(255, 191, 191);
+}
+
+.info_green {
+  color: green;
+  background-color: rgb(186, 255, 186);
+}
+
 @media screen and (min-width: 992px){
   .App {
     width: 500px;
