@@ -4,7 +4,7 @@ export default function Info({type, msg, removeInfo}) {
   useEffect(() => {
     setTimeout(() => {
       removeInfo()
-    }, 2500)
+    }, 1500)
   }, [])
   
 

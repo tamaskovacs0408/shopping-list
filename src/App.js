@@ -29,8 +29,13 @@ function App() {
   const showInfo = (show = false, type = "", msg = "") => {
     setInfo({ show, type, msg });
   };
-  const clearInfo = () => {
+  const clearList = () => {
     showInfo(true, 'red', 'List Cleared');
+    setList([]);
+  }
+  const deleteItem = (id) => {
+    showInfo(true, 'red', 'Item Deleted');
+    setList(list.filter((item) => item.id !== id));
   }
 
   return (
@@ -55,8 +60,8 @@ function App() {
         </form>
         {list.length > 0 && (
           <div className="list_container">
-            <List items={list} />
-            <button className="btn_clear">Clear list</button>
+            <List items={list} deleteItem={deleteItem}/>
+            <button className="btn_clear" onClick={clearList}>Clear list</button>
           </div>
         )}
       </div>

@@ -1,6 +1,6 @@
 .App {
   width: 250px;
-  height: 300px;
+  height: auto;
   background: #ffffff;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.18);
   display: flex;
@@ -42,6 +42,6 @@ h1 {
 @media screen and (min-width: 992px){
   .App {
     width: 500px;
-    height: 400px;
+    height: auto;
   }
 }
