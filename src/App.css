@@ -15,7 +15,9 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
+.item_form {
+  height: 150px;
+}
 .info_container {
   width: 100%;
   height: 70px;

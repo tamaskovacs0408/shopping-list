@@ -44,7 +44,7 @@ function App() {
       <div className="App">
         <form className="item_form" onSubmit={handleSubmit}>
           <div className="info_container">
-            {info.show && <Info {...info} removeInfo={showInfo} />}
+            {info.show && <Info {...info} removeInfo={showInfo} list={list}/>}
           </div>
           <div className="input_container">
             <input

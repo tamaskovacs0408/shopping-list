@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react'
 
-export default function Info({type, msg, removeInfo}) {
+export default function Info({type, msg, removeInfo, list}) {
   useEffect(() => {
-    setTimeout(() => {
+    const timeOut = setTimeout(() => {
       removeInfo()
     }, 1500)
-  }, [])
+    return () => clearTimeout(timeOut)
+  }, [list])
   
 
   return (
