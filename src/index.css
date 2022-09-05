@@ -10,6 +10,7 @@ body {
   align-items: center;
   background: #01ABC9;
   color: #140F2D;
+  overflow: hidden;
 }
 
 code {
