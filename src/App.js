@@ -16,7 +16,7 @@ function App() {
 
     if(!listItem) {
       // display info
-      setInfo({show: true, msg: 'Enter any value', type: 'red'})
+      showInfo(true, 'red', 'Type Something')
     } else if(listItem & update) {
       // edit the item
     } else {
@@ -26,6 +26,10 @@ function App() {
       setListItem('')
     }
   };
+
+  const showInfo = (show=false,type='',msg='') => {
+    setInfo({show, type, msg})
+  }
 
   return (
     <div className="App">
