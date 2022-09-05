@@ -1,5 +1,6 @@
 import React from 'react'
-import { faFileEdit } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function List({items}) {
   return (
@@ -10,9 +11,11 @@ export default function List({items}) {
           <p className='item_title'>{title}</p>
           <div className="btn_container">
             <button className='btn_edit'>
-              <faFileEdit />
+              <FontAwesomeIcon icon={faEdit} />
             </button>
-            <button></button>
+            <button className='btn_delete'>
+              <FontAwesomeIcon icon={faXmark}/>
+            </button>
           </div>
         </div>
       })}
