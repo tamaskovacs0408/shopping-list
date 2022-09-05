@@ -1,7 +1,8 @@
 .App {
   width: 250px;
-  height: 400px;
-  background: #E2DBBE;
+  height: 300px;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,10 +11,15 @@
 
 h1 {
   margin: 20px auto;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.item_form {
-  margin: 40px auto;
+.info_container {
+  width: 100%;
+  height: 70px;
+  margin: 15px auto;
 }
 
 .info {
@@ -36,6 +42,6 @@ h1 {
 @media screen and (min-width: 992px){
   .App {
     width: 500px;
-    height: 700px;
+    height: 400px;
   }
 }

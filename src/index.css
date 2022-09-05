@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #01ABC9;
+  background: #e0e0e0;
   color: #140F2D;
   overflow: hidden;
 }

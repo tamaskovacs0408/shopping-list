@@ -14,47 +14,50 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(!listItem) {
-      // display info
-      showInfo(true, 'red', 'Type Something')
-    } else if(listItem & update) {
+    if (!listItem) {
+      showInfo(true, "red", "Type Something");
+    } else if (listItem & update) {
       // edit the item
     } else {
-      // add item to list
-      const newItem = {id: uuid(), title: listItem};
+      showInfo(true, "green", "Item added");
+      const newItem = { id: uuid(), title: listItem };
       setList([...list, newItem]);
-      setListItem('')
+      setListItem("");
     }
   };
 
-  const showInfo = (show=false,type='',msg='') => {
-    setInfo({show, type, msg})
-  }
+  const showInfo = (show = false, type = "", msg = "") => {
+    setInfo({ show, type, msg });
+  };
 
   return (
-    <div className="App">
-      <h1>Shopping list</h1>
-      <form className="item_form" onSubmit={handleSubmit}>
-        {info.show && <Info {...info} removeInfo={showInfo}/>}
-        <div className="input_container">
-          <input
-            type="text"
-            placeholder="Add your item"
-            value={listItem}
-            onChange={(e) => setListItem(e.target.value)}
-          />
-          <button type="submit" className="btn_submit">
-            {update ? "Edit" : "Add"}
-          </button>
-        </div>
-      </form>
+    <>
+      <h1>Shopping List</h1>
+      <div className="App">
+        <form className="item_form" onSubmit={handleSubmit}>
+          <div className="info_container">
+            {info.show && <Info {...info} removeInfo={showInfo} />}
+          </div>
+          <div className="input_container">
+            <input
+              type="text"
+              placeholder="Add your item"
+              value={listItem}
+              onChange={(e) => setListItem(e.target.value)}
+            />
+            <button type="submit" className="btn_submit">
+              {update ? "Edit" : "Add"}
+            </button>
+          </div>
+        </form>
         {list.length > 0 && (
           <div className="list_container">
-          <List items={list}/>
-          <button className="btn_clear">Clear list</button>
-        </div>
+            <List items={list} />
+            <button className="btn_clear">Clear list</button>
+          </div>
         )}
-    </div>
+      </div>
+    </>
   );
 }
 
