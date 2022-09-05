@@ -5,7 +5,7 @@ import List from "./Component/List/List";
 import Info from "./Component/Info/Info";
 
 function App() {
-  const [item, setItem] = useState("");
+  const [listItem, setListItem] = useState("");
   const [list, setList] = useState([]);
   const [update, setUpdate] = useState(false);
   const [updateID, setUpdateID] = useState(null);
@@ -14,15 +14,15 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(!item) {
+    if(!listItem) {
       // display info
-    } else if(item & update) {
+    } else if(listItem & update) {
       // edit the item
     } else {
       // add item to list
-      const newItem = {id: uuid(), title: item};
+      const newItem = {id: uuid(), title: listItem};
       setList([...list, newItem]);
-      setItem('')
+      setListItem('')
     }
   };
 
@@ -35,8 +35,8 @@ function App() {
           <input
             type="text"
             placeholder="Add your item"
-            value={item}
-            onChange={(e) => setItem(e.target.value)}
+            value={listItem}
+            onChange={(e) => setListItem(e.target.value)}
           />
           <button type="submit" className="btn_submit">
             {update ? "Edit" : "Add"}
@@ -44,7 +44,7 @@ function App() {
         </div>
       </form>
       <div className="list_container">
-        <List />
+        <List items={list}/>
         <button className="btn_clear">Clear list</button>
       </div>
     </div>
