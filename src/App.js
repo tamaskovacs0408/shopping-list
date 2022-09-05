@@ -16,8 +16,17 @@ function App() {
 
     if (!listItem) {
       showInfo(true, "red", "Type Something");
-    } else if (listItem & update) {
-      // edit the item
+    } else if (listItem && update) {
+      setList(list.map((item) => {
+        if(item.id === updateID) {
+          return {...item, title: listItem}
+        }
+        return item;
+      }))
+      setListItem('');
+      setUpdateID(null);
+      setUpdate(false);
+      showInfo(true, 'green', 'Item Updated')
     } else {
       showInfo(true, "green", "Item added");
       const newItem = { id: uuid(), title: listItem };
