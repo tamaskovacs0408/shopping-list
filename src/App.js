@@ -43,10 +43,12 @@ function App() {
           </button>
         </div>
       </form>
-      <div className="list_container">
-        <List items={list}/>
-        <button className="btn_clear">Clear list</button>
-      </div>
+        {list.length > 0 && (
+          <div className="list_container">
+          <List items={list}/>
+          <button className="btn_clear">Clear list</button>
+        </div>
+        )}
     </div>
   );
 }
