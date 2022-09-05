@@ -8,6 +8,14 @@
   align-items: center;
 }
 
+h1 {
+  margin: 20px auto;
+}
+
+.item_form {
+  margin: 40px auto;
+}
+
 .info {
   text-align: center;
   padding: 5px;
