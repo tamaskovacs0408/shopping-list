@@ -29,6 +29,9 @@ function App() {
   const showInfo = (show = false, type = "", msg = "") => {
     setInfo({ show, type, msg });
   };
+  const clearInfo = () => {
+    showInfo(true, 'red', 'List Cleared');
+  }
 
   return (
     <>
