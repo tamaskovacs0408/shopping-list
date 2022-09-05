@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Info() {
+export default function Info({type, msg}) {
   return (
-    <div>Info</div>
+    <p className={`alert alert_${type}`}>{msg}</p>
   )
 }

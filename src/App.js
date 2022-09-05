@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <h1>Shopping list</h1>
       <form className="item_form" onSubmit={handleSubmit}>
-        {info.show && <Info />}
+        {info.show && <Info {...info}/>}
         <div className="input_container">
           <input
             type="text"
