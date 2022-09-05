@@ -6,7 +6,7 @@ export default function Info({type, msg, removeInfo, list}) {
       removeInfo()
     }, 1500)
     return () => clearTimeout(timeOut)
-  }, [list])
+  }, [list]) // Once anything changes on the list, clear timeout and set up new one.
   
 
   return (

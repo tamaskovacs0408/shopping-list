@@ -37,6 +37,12 @@ function App() {
     showInfo(true, 'red', 'Item Deleted');
     setList(list.filter((item) => item.id !== id));
   }
+  const updateItem = (id) => {
+    const specItem = list.find((item) => item.id === id);
+    setUpdate(true);
+    setUpdateID(id);
+    setListItem(specItem.title)
+  }
 
   return (
     <>
@@ -60,7 +66,7 @@ function App() {
         </form>
         {list.length > 0 && (
           <div className="list_container">
-            <List items={list} deleteItem={deleteItem}/>
+            <List items={list} deleteItem={deleteItem} updateItem={updateItem}/>
             <button className="btn_clear" onClick={clearList}>Clear list</button>
           </div>
         )}
