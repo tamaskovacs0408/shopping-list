@@ -21,6 +21,11 @@
   letter-spacing: 1px;
 }
 
+.animate__fadeOutRight {
+  animation-delay: 1s;
+}
+
+
 .info_red {
   color: red;
   background-color: rgb(255, 191, 191);
