@@ -1,9 +1,9 @@
 .App {
-  width: 250px;
+  width: 300px;
   height: auto;
-  margin: 20px auto 0 auto;
+  margin: 40px auto 0 auto;
   background: #ffffff;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
