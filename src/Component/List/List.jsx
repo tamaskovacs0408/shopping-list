@@ -11,10 +11,10 @@ export default function List({ items, deleteItem, updateItem }) {
           <div key={id} className="list_item">
             <p className="item_title">{title}</p>
             <div className="btn_container">
-              <button className="btn_edit">
+              <button className="btn btn_edit">
                 <FontAwesomeIcon icon={faEdit} onClick={() => updateItem(id)} />
               </button>
-              <button className="btn_delete">
+              <button className="btn btn_delete">
                 <FontAwesomeIcon
                   icon={faXmark}
                   onClick={() => deleteItem(id)}

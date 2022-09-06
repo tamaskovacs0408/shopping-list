@@ -82,18 +82,38 @@ h1 {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: antiquewhite;
   margin: 5px auto;
 }
 .list_item {
   width: 250px;
   display: flex;
   justify-content: space-between;
+  padding: 2px;
+  margin: 10px auto;
+  background-color: rgba(231, 227, 221, 0.543);
 }
-.btn_edit {
-  align-self: ;
+.item_title {
+  font-size: 1.8rem;
+  padding-left: 5px;
+}
+.btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.btn {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.btn_delete {
+  color: red;
+  font-size: 2.5rem;
 }
 
 .btn_clear {
