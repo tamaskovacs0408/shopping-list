@@ -9,22 +9,11 @@
   justify-content: flex-start;
   align-items: center;
 }
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 auto 15px auto;
-}
-.item_form {
-  height: 100px;
-}
 .info_container {
   width: 100%;
   height: 40px;
   margin: 15px auto;
 }
-
 .info {
   text-align: center;
   padding: 5px;
@@ -40,6 +29,19 @@ h1 {
 .info_green {
   color: green;
   background-color: rgb(186, 255, 186);
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 15px auto;
+}
+.item_form {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 992px){
