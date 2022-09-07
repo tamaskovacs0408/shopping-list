@@ -93,7 +93,8 @@ h1 {
   justify-content: space-between;
   padding: 2px;
   margin: 10px auto;
-  background-color: rgba(231, 227, 221, 0.543);
+  background-color: rgba(235, 234, 232, 0.543);
+  border-radius: 5px;
 }
 .item_title {
   font-size: 1.8rem;
@@ -139,9 +140,40 @@ h1 {
 }
 
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 768px){
   .App {
     width: 500px;
     height: auto;
+  }
+  .info {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .item_form {
+    height: 120px;
+  }
+  .input_container input {
+    font-size: 1.8rem;
+  }
+  .btn_submit {
+    font-size: 2rem;
+  }
+  .list_item {
+    width: 350px;
+  }
+  .item_title {
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 2.5rem;
+  }
+  .btn_delete {
+    font-size: 3rem;
+  }
+  .btn_clear {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
   }
 }
